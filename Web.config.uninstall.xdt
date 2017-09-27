@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.web>
+    <httpRuntime xdt:Transform="RemoveAttributes(encoderType,enableVersionHeader)" />
+  </system.web>
+  <system.webServer>
+    <modules>
+      <add name="WebSecurity.RemoveHeaders" type="WebSecurity.Modules.RemoveHeaders" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+      <add name="WebSecurity.HttpStrictTransportSecurityHeader" type="Websecurity.Modules.AddHttpStrictTransportSecurityHeader" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+    </modules>
+    <httpProtocol>
+      <customHeaders>
+        <add name="X-Frame-Options" value="DENY" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+        <add name="Pragma" value="no-cache" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+        <add name="Cache-Control" value="no-store" xdt:Transform="Remove" xdt:Locator="Match(name)" />
+      </customHeaders>
+    </httpProtocol>
+  </system.webServer>
+</configuration>

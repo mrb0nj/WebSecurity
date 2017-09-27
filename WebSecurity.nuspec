@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>WebSecurity</id>
+    <title>WebSecurity</title>
+    <authors>Nerdfury</authors>
+    <owners>Nerdfury</owners>
+    <version>$version$</version>
+    <projectUrl>https://github.com/nerdfury/websecurity</projectUrl>
+    <iconUrl>http://nerdfury.me/img/websecurity.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      Address some low severity web vulnerabilities that can pop up during penetration testing.
+      
+      This package will:
+      - Remove a configurable set of headers.
+      - Add HTTP Strict transport security headers
+      - Add no-cache/no-store headers.
+    </description>
+    <copyright>Nerdfury</copyright>
+    <tags>ASP.NET Security CustomHeaders Strict Transport Cache Control</tags>
+  </metadata>
+  <files>
+    <file src="bin\Release\WebSecurity.dll" target="lib\net45" />
+    <file src="Web.config.install.xdt" target="content" />
+    <file src="Web.config.uninstall.xdt" target="content" />
+  </files>
+</package>
